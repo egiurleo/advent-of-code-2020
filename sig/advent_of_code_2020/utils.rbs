@@ -1,0 +1,3 @@
+module Utils
+  def self.read_line: (file_name: String) -> Array[String]
+end
