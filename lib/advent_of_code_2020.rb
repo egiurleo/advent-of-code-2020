@@ -1,13 +1,14 @@
+# frozen_string_literal: true
+
 module AdventOfCode2020
   def self.root
     dir = __dir__
 
-    if dir.nil?
-      raise '__dir__ is nil; __dir__ must return a valid path to current directory'
-    end
+    raise '__dir__ is nil; __dir__ must return a valid path to current directory' if dir.nil?
 
     File.join(dir, '/..')
   end
 end
 
-require 'advent_of_code_2020/utils.rb'
+require 'advent_of_code_2020/utils'
+require 'advent_of_code_2020/day_01'

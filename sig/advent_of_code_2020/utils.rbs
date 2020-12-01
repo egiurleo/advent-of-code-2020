@@ -1,3 +1,3 @@
 module Utils
-  def self.read_line: (file_name: String) -> Array[String]
+  def self.read_file: (file_name: String, transform: Symbol) -> (Array[String]|Array[Integer])
 end

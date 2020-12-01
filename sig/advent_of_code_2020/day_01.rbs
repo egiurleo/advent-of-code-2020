@@ -1,0 +1,18 @@
+class AdventOfCode2020::Day01
+  TARGET: Integer
+  @expenses: Array[Integer]
+  @sum_finder: AdventOfCode2020::Day01::SumFinder
+
+  def initialize: (String) -> untyped
+  def part_one: () -> (Integer | nil)
+  def part_two: () -> (Integer | nil)
+end
+
+class AdventOfCode2020::Day01::SumFinder
+  @arr: Array[Integer]
+  @target: Integer
+
+  def initialize: (Array[Integer], Integer) -> untyped
+  def find_two: () -> (nil|Array[Integer])
+  def find_three: () -> (nil|Array[Integer])
+end
