@@ -12,3 +12,4 @@ end
 
 require 'advent_of_code_2020/utils'
 require 'advent_of_code_2020/day_01'
+require 'advent_of_code_2020/day_02'

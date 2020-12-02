@@ -1,0 +1,34 @@
+class AdventOfCode2020::Day02
+  @passwords: Array[String]
+
+  def initialize: (String) -> untyped
+  def part_one: () -> Integer
+  def part_two: () -> Integer
+  def count_valid_passwords: (singleton(AdventOfCode2020::Day02::OldPolicy)|singleton(AdventOfCode2020::Day02::NewPolicy)) -> Integer
+end
+
+class AdventOfCode2020::Day02::Policy
+  @low: Integer
+  @high: Integer
+  @letter: String
+
+  def initialize: (String) -> untyped
+end
+
+class AdventOfCode2020::Day02::OldPolicy
+  @low: Integer
+  @high: Integer
+  @letter: String
+
+  def initialize: (String) -> untyped
+  def valid?: (String) -> bool
+end
+
+class AdventOfCode2020::Day02::NewPolicy
+  @low: Integer
+  @high: Integer
+  @letter: String
+
+  def initialize: (String) -> untyped
+  def valid?: (String) -> bool
+end
