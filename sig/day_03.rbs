@@ -1,0 +1,16 @@
+class AdventOfCode2020::Day03
+  @map: AdventOfCode2020::Day03::Map
+
+  def initialize: (String) -> untyped
+  def part_one: () -> Integer
+  def part_two: () -> Integer
+  def trees_on_slope: (Integer, Integer) -> Integer
+end
+
+class AdventOfCode2020::Day03::Map
+  @map: Array[Array[String]]
+
+  def initialize: (Array[String]) -> untyped
+  def bottom?: (Integer) -> bool
+  def tree?: (Integer, Integer) -> bool
+end
