@@ -1,0 +1,33 @@
+module AdventOfCode2020
+  class Day05
+    @seats: Array[AdventOfCode2020::Day05::Seat]
+
+    def initialize: (Array[String] input_file) -> untyped
+    def part_one: () -> Integer
+    def part_two: () -> Integer
+  end
+end
+
+module AdventOfCode2020
+  class Day05
+    class Seat
+      @row_code: String
+      @col_code: String
+
+      def initialize: (String code) -> untyped
+
+      def row: () -> Integer
+      def col: () -> Integer
+      def id: () -> Integer
+    end
+  end
+end
+
+module AdventOfCode2020
+  class Day05
+    module NumberFinder
+      def self.find_number: (min: Integer min, max: Integer max, up_char: String up_char, down_char: String down_char, pattern: String pattern) -> Integer
+      def self.find_missing_number: (Array[Integer] list) -> Integer
+    end
+  end
+end
