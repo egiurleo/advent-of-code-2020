@@ -10,7 +10,6 @@ module AdventOfCode2020
       result = lines
                .compact
                .map(&:strip)
-               .reject(&:empty?)
 
       return result unless transform
 

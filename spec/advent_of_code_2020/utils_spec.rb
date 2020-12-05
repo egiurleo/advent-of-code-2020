@@ -33,12 +33,15 @@ describe AdventOfCode2020::Utils do
 
       it 'returns an array of lines with no whitespace at beginning or end of line' do
         expect(result).to be_a(Array)
-        expect(result.length).to eq(4)
+        expect(result.length).to eq(7)
 
         expect(result[0]).to eq('Lorem ipsum dolor sit amet consectetur adipiscing elit.')
         expect(result[1]).to eq('Nulla libero enim, tempus id eleifend et, pellentesque ut dui.')
         expect(result[2]).to eq('Sed a tellus quis libero posuere rhoncus non quis nisi.')
-        expect(result[3]).to eq('Proin tristique interdum lacinia.')
+        expect(result[3]).to be_empty
+        expect(result[4]).to be_empty
+        expect(result[5]).to be_empty
+        expect(result[6]).to eq('Proin tristique interdum lacinia.')
       end
     end
 

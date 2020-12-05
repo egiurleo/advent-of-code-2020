@@ -1,0 +1,73 @@
+class AdventOfCode2020::Day04
+  @passports: Array[AdventOfCode2020::Day04::Passport]
+
+  def initialize: (String) -> untyped
+  def part_one: () -> Integer
+  def part_two: () -> Integer
+end
+
+module AdventOfCode2020::Day04::PassportGenerator
+  def self.generate_many: (Array[String]) -> Array[AdventOfCode2020::Day04::Passport]
+  def self.generate_one: (Array[String]) -> AdventOfCode2020::Day04::Passport
+end
+
+class AdventOfCode2020::Day04::Passport
+  @ecl: AdventOfCode2020::Day04::Passport::EyeColor
+  @pid: AdventOfCode2020::Day04::Passport::Pid
+  @eyr: AdventOfCode2020::Day04::Passport::ExpirationYear
+  @hcl: AdventOfCode2020::Day04::Passport::HairColor
+  @byr: AdventOfCode2020::Day04::Passport::BirthYear
+  @iyr: AdventOfCode2020::Day04::Passport::IssueYear
+  @cid: AdventOfCode2020::Day04::Passport::Cid
+  @hgt: AdventOfCode2020::Day04::Passport::Height
+
+  def initialize: (**untyped fields) -> untyped
+  def ecl: () -> AdventOfCode2020::Day04::Passport::EyeColor
+  def pid: () -> AdventOfCode2020::Day04::Passport::Pid
+  def eyr: () -> AdventOfCode2020::Day04::Passport::ExpirationYear
+  def hcl: () -> AdventOfCode2020::Day04::Passport::HairColor
+  def byr: () -> AdventOfCode2020::Day04::Passport::BirthYear
+  def iyr: () -> AdventOfCode2020::Day04::Passport::IssueYear
+  def cid: () -> AdventOfCode2020::Day04::Passport::Cid
+  def hgt: () -> AdventOfCode2020::Day04::Passport::Height
+  def valid?: (?strict: bool strict) -> bool
+end
+
+class AdventOfCode2020::Day04::Passport::Field
+  @value: String|nil
+
+  def initialize: (String|nil) -> untyped
+  def valid?: (?strict: bool strict) -> bool
+  def strictly_valid?: () -> bool
+end
+
+class AdventOfCode2020::Day04::Passport::BirthYear < AdventOfCode2020::Day04::Passport::Field
+  @value: Integer|nil
+end
+
+class AdventOfCode2020::Day04::Passport::Cid < AdventOfCode2020::Day04::Passport::Field
+end
+
+class AdventOfCode2020::Day04::Passport::ExpirationYear < AdventOfCode2020::Day04::Passport::Field
+  @value: Integer|nil
+end
+
+class AdventOfCode2020::Day04::Passport::EyeColor < AdventOfCode2020::Day04::Passport::Field
+  VALID_COLORS: Array[String]
+end
+
+class AdventOfCode2020::Day04::Passport::HairColor < AdventOfCode2020::Day04::Passport::Field
+  @value: Integer|nil
+end
+
+class AdventOfCode2020::Day04::Passport::Height < AdventOfCode2020::Day04::Passport::Field
+  @value: Integer|nil
+  @units: String|nil
+end
+
+class AdventOfCode2020::Day04::Passport::IssueYear < AdventOfCode2020::Day04::Passport::Field
+  @value: Integer|nil
+end
+
+class AdventOfCode2020::Day04::Passport::Pid < AdventOfCode2020::Day04::Passport::Field
+end
