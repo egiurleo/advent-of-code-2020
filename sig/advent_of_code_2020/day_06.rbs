@@ -1,0 +1,22 @@
+module AdventOfCode2020
+  class Day06
+    @groups: Array[AdventOfCode2020::Day06::Group]
+
+    def initialize: (String input_file) -> untyped
+    def part_one: () -> Integer
+    def part_two: () -> Integer
+  end
+end
+
+module AdventOfCode2020
+  class Day06
+    class Group
+      @number_people: Integer
+      @questions_answered: Hash[String, Integer]
+
+      def initialize: (Array[String] lines) -> untyped
+      def number_questions_answered: () -> Integer
+      def number_questions_everybody_answered: () -> Integer
+    end
+  end
+end
